@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID 19</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
+    <link rel="stylesheet" href="css/application.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#">
+            Finhelp
+            <img src="" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-0">
+                <li class="nav-item"><a class="nav-link" href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" id="main-container">
+        <div class="row" id="main-container-row">
+            <div class="col-md-3 bg-secondary text-light p-2 d-flex flex-column" id="sidenav">
+                <div class="profile text-center">
+                    <img src="assets/images/medical-mask.png" class="border mt-3 rounded" width="100" height="100"
+                        alt="profile pic">
+                    <p class="lead m-2">Administrator</p>
+                </div>
+                <div class="btn-group btn-group-toggle d-flex flex-column mt-3" data-toggle="buttons">
+                    <label class="btn btn-secondary w-100" onclick="window.location.href='index.html'">
+                        <input type="radio" name="options" id="option1" autocomplete="off">Manage Grievances
+                    </label>
+                    <label class="btn btn-secondary w-100" onclick="window.location.href='index.html'">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Analytics
+                    </label>
+                    <label class="btn btn-secondary active w-100">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked>View application
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-9 p-4 bg-light">
+                <h5 class="h5 mb-4">Manage Grievances</h5>
+                <div class="m-auto p-2 d-flex flex-column align-items-center" id="manage">
+                    <h5 class="h5 my-4">Reviewing Application</h5>
+                    <div class="row w-100 mx-auto">
+                        <div class="col-md-6 d-flex flex-column" id="left">
+                            <div class="info-table d-flex flex-column border-right border-secondary">
+                                <div class="d-flex flex-row table-items">
+                                    <p class="w-50 font-weight-bold">Name</p>
+                                    <p>Floria Parkinson</p>
+                                </div>
+                                <div class="d-flex flex-row table-items">
+                                    <p class="w-50 font-weight-bold">Address</p>
+                                    <p>Floria Parkinson</p>
+                                </div>
+                                <div class="d-flex flex-row table-items">
+                                    <p class="w-50 font-weight-bold">Documents</p>
+                                    <ul class="document-ul">
+                                        <li><a href="#">Aadhar Card</a></li>
+                                        <li><a href="#">PAN Card</a></li>
+                                        <li><a href="#">Income Proof</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-row table-items">
+                                    <p class="w-50 font-weight-bold">Compensation demanded</p>
+                                    <p>INR 173,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" id="right">
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                Approve application
+                            </button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#exampleModalCenter2">
+                                Reject application
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Approve Application</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span>Amount to be compensated</span>
+                    <input type="number" class="w-50 ml-2" name="quantity" min="5000" max="10,00,000" step="500"
+                        required />
+                    <button type="button" class="btn btn-primary mx-auto d-block">Go</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Reject Application</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Specify the reason</label>
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Choose...</option>
+                            <option value="1">Incorrect Aadhaar ID</option>
+                            <option value="2">Incorrect Bank details</option>
+                            <option value="3">Amount requested is not concurrent with earnings</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary mx-auto d-block">Reject</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

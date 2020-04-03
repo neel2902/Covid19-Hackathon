@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+}
+#manage {
+    width:95%;
+    border-radius: 5px;
+}
+.s-bars {
+    width: 35%;
+}
+#main-container {
+    min-height: calc(100% - 56px); 
+}
+#table-container {
+    height: 70vh;
+    overflow-y: scroll;
+}
+@media (max-width: 768px) { 
+    .s-bars {
+        width: 85%;
+        margin: 10px;
+    }
+    body {
+        overflow: auto;
+    }
+    #table-container {
+        overflow: scroll;
+    }
+}

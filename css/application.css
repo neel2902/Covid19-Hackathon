@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+#manage {
+    background-color: #dee2e6;
+}
+button {
+    margin: 20px;
+}
+.document-ul {
+    list-style: none;
+    margin: none;
+    padding: 0;
+}
+#main-container {
+    min-height: 92.5vh;
+}
+@media (min-width: 768px) {
+    #main-container-row {
+        min-height: 100vh;
+    }
+    body {
+        overflow: hidden;
+    }
+}

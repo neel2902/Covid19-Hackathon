@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
         <a class="navbar-brand" href="#">
             Finhelp
-            <img src="" width="30" height="30" alt="">
+            <img src="assets/images/growth.png" width="20" height="20" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,15 +72,16 @@
                 <div class="m-auto p-2 d-flex flex-column" id="manage">
                     <form class="container-fluid d-flex flex-column flex-md-row m-2 justify-content-around">
                         <div class="input-group s-bars">
-                            <input class="form-control" type="text" placeholder="Search by name" aria-label="Search">
+                            <input class="form-control" type="text" onkeyup="searchByName()"
+                                placeholder="Search by name" aria-label="Search" id="sbn">
                             <div class="input-group-append">
                                 <span class="input-group-text red lighten-3" id="basic-text1"><i
                                         class="fas fa-search text-grey" aria-hidden="true"></i></span>
                             </div>
                         </div>
                         <div class="input-group s-bars">
-                            <input class="form-control" type="text" placeholder="Search by AADHAAR number"
-                                aria-label="Search">
+                            <input class="form-control" type="text" onkeyup="searchByAD()"
+                                placeholder="Search by AADHAAR number" aria-label="Search" id="sba">
                             <div class="input-group-append">
                                 <span class="input-group-text red lighten-3" id="basic-text1"><i
                                         class="fas fa-search text-grey" aria-hidden="true"></i></span>
@@ -210,7 +211,7 @@
     </div>
 
 
-
+    <script src="js/home.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

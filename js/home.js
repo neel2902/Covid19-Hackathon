@@ -27,3 +27,15 @@ const search = (index) => {
         }
     }
 }
+var myHeaders = new Headers();
+myHeaders.append("X-AUTH", "0ac6859b-8fa9-4d7a-b24e-61e4a42b6079");
+
+var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+};
+
+fetch("https://finhelp.herokuapp.com/register/get-documents/", requestOptions)
+    .then(response => response.json())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));

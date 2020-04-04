@@ -9,6 +9,29 @@
 #main-container {
     min-height: 92.5vh;
 }
+.ct-label {
+    font-size: 0.8em;
+    color:black;
+}
+
+.ct-chart-donut .ct-label, .ct-chart-pie .ct-label {
+    font-weight: 400;
+    opacity: 1;
+    fill: #000000;
+    font-size: 0.9em;
+}
+.color1 {
+    stroke: #d70206;
+    fill: #d70206  ;
+}
+.color2 {
+    stroke: #f05b4f;
+    fill: #f05b4f;
+}
+.color3 {
+    stroke: #ff9b93;
+    fill: #ff9b93;
+}
 @media (min-width: 768px) {
     #main-container-row {
         min-height: 100vh;

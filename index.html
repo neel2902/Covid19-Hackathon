@@ -12,12 +12,14 @@
     <div class="login">
         <h1>Welcome</h1>
         <img src="assets/images/medical-mask.png" width="70" height="70" alt="company-logo">
-        <form class="form">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit" class="submit" onclick="window.location.href='home.html'">Login</button>
-        </form>
+        <div class="form">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button class="submit" onclick="login()">Login</button>
+        </div>
     </div>
+    <script src="js/index.js">
+    </script>
 </body>
 
 </html>

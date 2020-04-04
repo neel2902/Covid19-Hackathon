@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#">
+            Finhelp
+            <img src="assets/images/growth.png" width="20" height="20" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid" id="main-container">
+        <div class="row" id="main-container-row">
+            <div class="col-md-3 bg-secondary text-light p-2 d-flex flex-column" id="sidenav">
+                <div class="profile text-center">
+                    <img src="assets/images/medical-mask.png" class="border mt-3 rounded" width="100" height="100"
+                        alt="profile pic">
+                    <p class="lead m-2">Administrator</p>
+                </div>
+                <div class="btn-group btn-group-toggle d-flex flex-column mt-3" data-toggle="buttons">
+                    <label class="btn btn-secondary w-100" onclick="window.location.href='home.html'">
+                        <input type="radio" name="options" id="option1" autocomplete="off">Manage Grievances
+                    </label>
+                    <label class="btn btn-secondary w-100" onclick="window.location.href='analytics.html'">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Analytics
+                    </label>
+                    <label class="btn btn-secondary active w-100">
+                        <input type="radio" name="options" id="option3" autocomplete="off" checked>View application
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-9 p-4 bg-light">
+                <h5 class="h5 mb-4">Manage Grievances</h5>
+                <div class="m-auto p-2 d-flex flex-column" id="manage">
+                    <div class="container-fluid">
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-md-4">
+                                <p class="mb-2">Dataset</p>
+                                <div class="ct-chart1 ct-perfect-fourth">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ct-chart2 ct-square"></div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-md-4">
+                                <p class="mb-2">Dataset</p>
+                                <div class="ct-chart3 ct-perfect-fourth">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ct-chart4 ct-perfect-fourth"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var data1 = {
+                // A labels array that can contain any sort of values
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+                // Our series array that contains series objects or in this case series data arrays
+                series: [
+                    [5, 2, 4, 2, 0]
+                ]
+            };
+            var data2 = {
+                labels: ['Bananas', 'Apples', 'Grapes'],
+                series: [20, 15, 40]
+            };
+
+            var options = {
+                labelInterpolationFnc: function (value) {
+                    return value[0]
+                }
+            };
+
+            var responsiveOptions = [
+                ['screen and (min-width: 640px)', {
+                    chartPadding: 30,
+                    labelOffset: 80,
+                    labelDirection: 'explode',
+                    labelInterpolationFnc: function (value) {
+                        return value;
+                    }
+                }],
+                ['screen and (min-width: 1024px)', {
+                    labelOffset: 20,
+                    chartPadding: 20
+                }]
+            ];
+            var data3 = {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                series: [
+                    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+                    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+                ]
+            };
+
+            var options2 = {
+                seriesBarDistance: 15
+            };
+
+            var responsiveOptions2 = [
+                ['screen and (min-width: 641px) and (max-width: 1024px)', {
+                    seriesBarDistance: 10,
+                    axisX: {
+                        labelInterpolationFnc: function (value) {
+                            return value;
+                        }
+                    }
+                }],
+                ['screen and (max-width: 640px)', {
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function (value) {
+                            return value[0];
+                        }
+                    }
+                }]
+            ];
+            new Chartist.Line('.ct-chart4', data1);
+            new Chartist.Bar('.ct-chart3', data3, options2, responsiveOptions2);
+            new Chartist.Pie('.ct-chart2', data2, options, responsiveOptions);
+            new Chartist.Line('.ct-chart1', data1);
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

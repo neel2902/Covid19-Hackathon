@@ -62,7 +62,7 @@ var requestOptions = {
     headers: myHeaders,
 };
 
-fetch("http://finhelp.herokuapp.com/register/get-documents/", requestOptions)
+fetch("https://finhelp.herokuapp.com/register/get-documents/", requestOptions)
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

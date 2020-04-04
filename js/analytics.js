@@ -3,12 +3,23 @@ var data1 = {
     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
     // Our series array that contains series objects or in this case series data arrays
     series: [
-        [5, 2, 4, 2, 0]
+        [545, 223, 427, 294, 012]
     ]
 };
 var data2 = {
     labels: ['Manufacturing', 'Service', 'Other'],
-    series: [20, 15, 40]
+    series: [{
+        value: 35,
+        className: 'color1',
+    },
+    {
+        value: 25,
+        className: 'color2',
+    },
+    {
+        value: 45,
+        className: 'color3',
+    }]
 };
 
 var options = {
@@ -20,14 +31,14 @@ var options = {
 var responsiveOptions = [
     ['screen and (min-width: 640px)', {
         chartPadding: 30,
-        labelOffset: 80,
+        labelOffset: 30,
         labelDirection: 'explode',
         labelInterpolationFnc: function (value) {
             return value;
         }
     }],
     ['screen and (min-width: 1024px)', {
-        labelOffset: 20,
+        labelOffset: 10,
         chartPadding: 20
     }]
 ];
@@ -61,7 +72,15 @@ var responsiveOptions2 = [
         }
     }]
 ];
-new Chartist.Line('.ct-chart4', data1);
+var data4 = {
+    // A labels array that can contain any sort of values
+    labels: ['3-5', '5-8', '8-10', '10-15', '15+'],
+    // Our series array that contains series objects or in this case series data arrays
+    series: [
+        [462, 930, 729, 294, 392]
+    ]
+};
+new Chartist.Line('.ct-chart4', data4);
 new Chartist.Bar('.ct-chart3', data3, options2, responsiveOptions2);
 new Chartist.Pie('.ct-chart2', data2, options, responsiveOptions);
 new Chartist.Line('.ct-chart1', data1);

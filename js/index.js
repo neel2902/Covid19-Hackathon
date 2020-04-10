@@ -1,15 +1,4 @@
-const HOST = "https://finhelp-api.herokuapp.com/"
-var raw = "{\n	\"username\":\"staff_1\",\n	\"password\":\"Qazwsx@23\"\n}";
-const users = [
-    {
-        'username': 'testuser',
-        'password': 'test'
-    },
-    {
-        'username': 'testuser2',
-        'password': 'test2'
-    }
-]
+const HOST = "https://finhelp-api.herokuapp.com/";
 let username = '';
 let password = '';
 

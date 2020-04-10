@@ -69,6 +69,6 @@ document.getElementById('reject').addEventListener('click', function () {
         .catch(error => alert("Some error occurred"));
 })
 
-const Open = () => {
+function Open() {
     window.open(doclink);
 }

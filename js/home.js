@@ -1,4 +1,6 @@
 const HOST = "https://finhelp-api.herokuapp.com/"
+
+document.getElementById("staff").textContent = localStorage.getItem('User_auth');
 let input, filter, table, tr, td, i, txtValue;
 table = document.getElementById("table");
 tr = table.getElementsByTagName("tr");
@@ -48,7 +50,5 @@ fetch(HOST + "staff/task-details/", requestOptions)
         return console.log(result);
     })
     .catch(error => console.log('error', error));
-
-document.getElementById("staff").textContent = localStorage.getItem('User_auth');
 
 
